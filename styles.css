@@ -1,0 +1,390 @@
+/* RESET & ESTILOS GENERALES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0d0d0d;
+    color: #f1f1f1;
+    overflow-x: hidden;
+}
+
+/* HERO SECTION */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #2c001a 0%, #0d0d0d 100%);
+    padding: 0 20px;
+}
+
+.hero-content {
+    z-index: 2;
+    max-width: 600px;
+}
+
+.avatar-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px auto;
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ff2a85;
+    box-shadow: 0 0 20px rgba(255, 42, 133, 0.4);
+}
+
+.status-dot {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 20px;
+    height: 20px;
+    background-color: #00e676;
+    border: 3px solid #0d0d0d;
+    border-radius: 50%;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero h1 span {
+    color: #ff2a85;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+.badges {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    font-size: 0.85rem;
+    color: #ccc;
+}
+
+.badges span i {
+    color: #ff2a85;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff2a85, #ff1155);
+    color: #fff;
+    padding: 15px 35px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 10px 25px rgba(255, 17, 85, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(255, 17, 85, 0.6);
+}
+
+/* SECCIÓN PLANES */
+.plans-section {
+    padding: 80px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #888;
+}
+
+.plans-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.plan-card {
+    background-color: #161616;
+    border: 1px solid #262626;
+    border-radius: 20px;
+    padding: 30px;
+    position: relative;
+    transition: border-color 0.3s;
+}
+
+.plan-card.popular {
+    border-color: #ff2a85;
+    background: linear-gradient(180deg, #2c111d 0%, #161616 100%);
+}
+
+.tag-popular {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background-color: #ff2a85;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 20px;
+}
+
+.plan-header h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 1.2rem;
+    color: #888;
+    margin-bottom: 25px;
+}
+
+.price span {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.plan-features {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.plan-features li {
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.plan-features li i {
+    color: #00e676;
+    margin-right: 8px;
+}
+
+.btn-plan {
+    display: block;
+    text-align: center;
+    background-color: #222;
+    color: #fff;
+    padding: 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.btn-plan.active {
+    background-color: #ff2a85;
+}
+
+.btn-plan:hover {
+    background-color: #333;
+}
+.btn-plan.active:hover {
+    background-color: #e01b72;
+}
+
+/* SECCIÓN PAGOS */
+.payment-section {
+    padding: 60px 20px 100px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.payment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.payment-card {
+    background-color: #161616;
+    border: 1px solid #262626;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+}
+
+.payment-card i {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.payment-card h4 {
+    margin-bottom: 10px;
+}
+
+.payment-card p {
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.btn-pay {
+    display: block;
+    background-color: #262626;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.btn-pay:hover {
+    background-color: #383838;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid #1a1a1a;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.hero-buttons .btn-primary {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 28px;
+}
+
+/* SECCIÓN PLATAFORMAS (Cafecito, Tecito, OnlyFans) */
+.platforms-section {
+    padding: 80px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.platforms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.platform-card {
+    background-color: #161616;
+    border: 1px solid #262626;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    transition: border-color 0.3s, transform 0.2s;
+}
+
+.platform-card:hover {
+    transform: translateY(-5px);
+    border-color: #555;
+}
+
+.platform-card.popular-platform {
+    border-color: #ff2a85;
+    background: linear-gradient(180deg, #2c111d 0%, #161616 100%);
+}
+
+.platform-img {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+
+.platform-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.platform-card:hover .platform-img img {
+    transform: scale(1.05);
+}
+
+.platform-info {
+    padding: 25px;
+}
+
+.platform-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+}
+
+.platform-info p {
+    font-size: 0.85rem;
+    color: #ff2a85;
+    margin-bottom: 20px;
+    min-height: 40px;
+}
+
+.btn-platform {
+    display: block;
+    text-align: center;
+    background-color: #222;
+    color: #fff;
+    padding: 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.btn-platform.active {
+    background-color: #ff2a85;
+}
+
+.btn-platform:hover {
+    background-color:#ff2a85;
+}
+
+.btn-platform.active:hover {
+    background-color: #e01b72;
+}
+/* Ajuste especial para que la imagen de Cafecito se vea completa */
+.platform-img.platform-img-fit {
+    background-color: #0a0a0a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.platform-img.platform-img-fit img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
