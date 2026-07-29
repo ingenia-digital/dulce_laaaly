@@ -8,7 +8,282 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <!-- FontAwesome para iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    
+    <!-- ESTILOS INCORPORADOS DIRECTAMENTE PARA EVITAR ERRORES EN CELULAR -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #0d0d0d;
+            color: #f1f1f1;
+            overflow-x: hidden;
+        }
+
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, #2c001a 0%, #0d0d0d 100%);
+            padding: 40px 20px;
+        }
+
+        .hero-content {
+            z-index: 2;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .avatar-container {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px auto;
+        }
+
+        .avatar {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #ff2a85;
+            box-shadow: 0 0 20px rgba(255, 42, 133, 0.4);
+        }
+
+        .status-dot {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            width: 20px;
+            height: 20px;
+            background-color: #00e676;
+            border: 3px solid #0d0d0d;
+            border-radius: 50%;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .hero h1 span {
+            color: #ff2a85;
+        }
+
+        .subtitle {
+            font-size: 0.95rem;
+            color: #aaa;
+            margin-bottom: 20px;
+            padding: 0 10px;
+        }
+
+        .badges {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 25px;
+            font-size: 0.8rem;
+            color: #ccc;
+        }
+
+        .badges span i {
+            color: #ff2a85;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #ff2a85, #ff1155);
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.9rem;
+            box-shadow: 0 10px 25px rgba(255, 17, 85, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .platforms-section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+        }
+
+        .section-title p {
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        .platforms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .platform-card {
+            background-color: #161616;
+            border: 1px solid #262626;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .platform-card.popular-platform {
+            border-color: #ff2a85;
+            background: linear-gradient(180deg, #2c111d 0%, #161616 100%);
+        }
+
+        .tag-popular {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background-color: #ff2a85;
+            color: #fff;
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 20px;
+            z-index: 3;
+        }
+
+        .platform-img {
+            width: 100%;
+            height: 180px;
+            overflow: hidden;
+        }
+
+        .platform-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .platform-img.platform-img-fit {
+            background-color: #0a0a0a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .platform-img.platform-img-fit img {
+            object-fit: contain;
+        }
+
+        .platform-info {
+            padding: 20px;
+        }
+
+        .platform-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+
+        .platform-info p {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 20px;
+        }
+
+        .btn-platform {
+            display: block;
+            text-align: center;
+            background-color: #222;
+            color: #fff;
+            padding: 12px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .btn-platform.active {
+            background-color: #ff2a85;
+        }
+
+        .payment-section {
+            padding: 40px 20px 80px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .payment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .payment-card {
+            background-color: #161616;
+            border: 1px solid #262626;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .payment-card i {
+            font-size: 2.2rem;
+            margin-bottom: 12px;
+        }
+
+        .payment-card h4 {
+            margin-bottom: 8px;
+        }
+
+        .payment-card p {
+            font-size: 0.8rem;
+            color: #888;
+            margin-bottom: 15px;
+        }
+
+        .btn-pay {
+            display: block;
+            background-color: #262626;
+            color: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px 20px;
+            border-top: 1px solid #1a1a1a;
+            font-size: 0.75rem;
+            color: #666;
+        }
+    </style>
 </head>
 <body>
 
@@ -27,7 +302,7 @@
                 <span><i class="fa-solid fa-bolt"></i> Acceso Inmediato</span>
             </div>
             
-            <!-- BOTONES DE REDES (INSTAGRAM Y TELEGRAM) -->
+            <!-- BOTONES DE REDES -->
             <div class="hero-buttons">
                 <a href="https://www.instagram.com/_laly93?igsh=MXRvYjJjYXd2bDdqMg==" target="_blank" class="btn-primary">
                     <i class="fa-brands fa-instagram"></i> Instagram
@@ -47,7 +322,7 @@
         </div>
 
         <div class="platforms-grid">
-            <!-- Cafecito (Con la nueva imagen ajustada para verse completa) -->
+            <!-- Cafecito -->
             <div class="platform-card">
                 <div class="platform-img platform-img-fit">
                     <img src="https://uploads.onecompiler.io/43vjzagjf/44wkpewrw/WhatsApp%20Image%202026-07-29%20at%2010.04.58.jpeg" alt="Cafecito">
@@ -98,7 +373,7 @@
                 <h4>Mercado Pago</h4>
                 <p>Pagá con tarjeta de débito, crédito o dinero en cuenta al instante.</p>
                 <a href="#" class="btn-pay">Pagar con Mercado Pago</a>
-            </div> Dizzy
+            </div>
             <div class="payment-card">
                 <i class="fa-brands fa-paypal" style="color: #00457c;"></i>
                 <h4>PayPal</h4>
